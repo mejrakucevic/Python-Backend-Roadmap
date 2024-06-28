@@ -13,8 +13,8 @@ else: print("y is greater than x")
     
     
     
-myName = "Mejra"
-print(myName)
+# myName = "Mejra"
+# print(myName)
 
 games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 
@@ -59,11 +59,20 @@ games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 # Set: Common operations include adding, removing, union, intersection, difference, and symmetric difference.
 
 set1 = {17,2,3,4,5,234,756,22}
-print(set1)
+# print(set1)
 
 
 # DICTIONARIES : KEY:VALUE PAIRS
 dict = {"Lock1":2034,"Lock2":5552}
 
-print(dict)
-print(dict["Lock1"])
+# print(dict)
+# print(dict["Lock1"])
+
+
+# age = int(input("Age: "))
+# print("You are ", age, " years old")
+
+import math
+
+stepen = math.sqrt(64)
+print(stepen)
