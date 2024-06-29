@@ -1,22 +1,5 @@
 print("Oink")
 
-x=5.34
-y=5.5
-
-
-# print(type(x))
-
-if (x>y):
-    print("x is greater than y") 
-    
-else: print("y is greater than x")
-    
-    
-    
-# myName = "Mejra"
-# print(myName)
-
-games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 
 # print(games[0])
 
@@ -31,6 +14,7 @@ games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 # r2 = list(range(5, 0, -1))
 # print(r2)
 
+# -----------------------------
 
 # LISTE VS SETS
 # Order:
@@ -75,4 +59,58 @@ dict = {"Lock1":2034,"Lock2":5552}
 import math
 
 stepen = math.sqrt(64)
-print(stepen)
+# print(stepen)
+
+# -----------------------------
+
+A = [0,1,2,3,4,5] # LIST
+B = (0,1,2,3,4,5) # TUPLE
+C = {0,1,2,3,4,5} # SET
+D = {"Name:": "Mejra", "Age:":19} # DICTIONARY
+
+# print("age" in D)
+# print(2 in C)
+
+# for a in A:
+#     print(a)
+
+# for i, j in D.items():
+#     print(i, j)
+    
+# for x in range(1, 5):
+#     print(x)
+
+
+# i = 0
+
+# while i < 5:
+#     print(i)
+#     i+=1
+    
+# -----------------------------
+    
+x = "           TLOU"
+y = "Before the storm"
+
+# print(x.lower().capitalize())
+
+# print(y.capitalize())
+
+# print(y[0:7] + y[11:16].capitalize()) 
+
+# print(x.lstrip())
+
+# -----------------------------
+
+
+games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
+
+g1 = games[1]
+print(len(g1))
+
+games.insert(6, "BEFORE THE STORM")
+
+games.append("Ghost of Tsushima")
+
+for i in games:
+    print(i)
