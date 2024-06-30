@@ -105,12 +105,46 @@ y = "Before the storm"
 
 games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 
-g1 = games[1]
-print(len(g1))
+# g1 = games[1]
+# print(len(g1))
 
-games.insert(6, "BEFORE THE STORM")
+# games.insert(6, "BEFORE THE STORM")
 
-games.append("Ghost of Tsushima")
+# games.append("Ghost of Tsushima")
 
-for i in games:
-    print(i)
+# for i in games:
+#     print(i)
+
+# -----------------------------    
+    
+books = {"MYORAR": "Odessa M.", "The Idiot":"Fyodor D.", "Pachinko":"Min Ji"}
+
+books["Normal People"] = "Sally Rooney"
+
+print(books)
+
+# -----------------------------    
+
+def shop(item, price):
+    print("Item: ", item)
+    print("Price: ", price)
+    
+    
+shop("Choccy", 70)
+
+
+def uni(name, major, year, **marks):
+    
+   
+    print("\nName: ", name)
+    print("Major: ", major)
+    print("Year: ", year)
+    # print("Marks: ", marks)
+    
+    for x, y in marks.items():
+        print("Marks: ", x, y)
+        
+    
+    
+
+uni("Mejra", "CS", 2, math=9, coding=9)

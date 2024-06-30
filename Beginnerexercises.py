@@ -38,19 +38,36 @@ b = 150
 #     x += 1
 # else: print("Loop complete")
 
-a =float(input("Enter A: "))
-b =float(input("Enter B: "))
+# a =float(input("Enter A: "))
+# b =float(input("Enter B: "))
 
 
-c = input("Enter 1 for sum of A and B, 0 for exit: ")
+# c = input("Enter 1 for sum of A and B, 0 for exit: ")
 
-while c != '0':
+# while c != '0':
   
-    print(a+b)
+#     print(a+b)
   
-    c = input("Enter 1 for sum of A and B, 0 for exit: ")
-    if c != '0':
-      a =float(input("Enter A: "))
-      b =float(input("Enter B: "))
+#     c = input("Enter 1 for sum of A and B, 0 for exit: ")
+#     if c != '0':
+#       a =float(input("Enter A: "))
+#       b =float(input("Enter B: "))
   
-else: print("Exited program")
+# else: print("Exited program")
+
+
+
+# Write a function that accepts 2 parameters of the same type, it can be a string or float, and adds them together. If both parameters are not the saem type
+# give error message to user
+
+x= input("Enter the first value: ")
+y = input("Enter the second value: ")
+
+def errorCheck(x, y):
+  if type(x) == type(y):
+    return x + y
+  else:
+    print("The values must be of the same type")
+
+result = errorCheck(x,y)
+print(result)
