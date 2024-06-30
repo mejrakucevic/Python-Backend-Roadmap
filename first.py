@@ -117,34 +117,53 @@ games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 
 # -----------------------------    
     
-books = {"MYORAR": "Odessa M.", "The Idiot":"Fyodor D.", "Pachinko":"Min Ji"}
+# books = {"MYORAR": "Odessa M.", "The Idiot":"Fyodor D.", "Pachinko":"Min Ji"}
 
-books["Normal People"] = "Sally Rooney"
+# books["Normal People"] = "Sally Rooney"
 
-print(books)
+# print(books)
 
-# -----------------------------    
+# # -----------------------------    
 
-def shop(item, price):
-    print("Item: ", item)
-    print("Price: ", price)
+# def shop(item, price):
+#     print("Item: ", item)
+#     print("Price: ", price)
     
     
-shop("Choccy", 70)
+# shop("Choccy", 70)
 
 
-def uni(name, major, year, **marks):
+# def uni(name, major, year, **marks):
     
    
-    print("\nName: ", name)
-    print("Major: ", major)
-    print("Year: ", year)
-    # print("Marks: ", marks)
+#     print("\nName: ", name)
+#     print("Major: ", major)
+#     print("Year: ", year)
+#     # print("Marks: ", marks)
     
-    for x, y in marks.items():
-        print("Marks: ", x, y)
+#     for x, y in marks.items():
+#         print("Marks: ", x, y)
         
     
     
 
-uni("Mejra", "CS", 2, math=9, coding=9)
+# uni("Mejra", "CS", 2, math=9, coding=9)
+
+# -----------------------------    
+
+class Game:
+    
+    def __init__(self, name):
+        self.name = name
+        self.year = 2020
+        self.rating = 9.5
+        
+    def gameInfo(self):
+        print("Name: ", self.name)
+        print("Year: ", self.year)
+        print("Ratinself: ", self.rating)
+        
+
+game1 = Game("the last of us")
+
+game1.gameInfo()
