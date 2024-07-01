@@ -151,19 +151,40 @@ games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 
 # -----------------------------    
 
-class Game:
+# class Game:
     
-    def __init__(self, name):
-        self.name = name
-        self.year = 2020
-        self.rating = 9.5
+#     def __init__(self, name):
+#         self.name = name
+#         self.year = 2020
+#         self.rating = 9.5
         
-    def gameInfo(self):
-        print("Name: ", self.name)
-        print("Year: ", self.year)
-        print("Ratinself: ", self.rating)
+#     def gameInfo(self):
+#         print("Name: ", self.name)
+#         print("Year: ", self.year)
+#         print("Ratinself: ", self.rating)
         
 
-game1 = Game("the last of us")
+# game1 = Game("the last of us")
 
-game1.gameInfo()
+# game1.gameInfo()
+
+# -----------------------------    encapsulation
+
+
+class TLOU3:
+    def __init__(self):
+        self.release = 2027
+        self.__new_release = 2028
+        
+    def getNewRelease(self):
+        return self.__new_release
+    
+    def setNewRelease(self, newRelease):
+        self.__new_release = newRelease
+        
+        
+i1 = TLOU3()
+
+i1.setNewRelease(2026)
+
+print(i1.getNewRelease())
