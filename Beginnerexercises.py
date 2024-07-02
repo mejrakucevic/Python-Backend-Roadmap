@@ -104,7 +104,7 @@ b = 150
 # ----------------------------- 
 # Make a simple calculator app using path
 
-from calc import calculate 
+# from calc import calculate 
 
 # def calculator():
 #   a = int(input("Enter number 1: "))
@@ -125,4 +125,41 @@ from calc import calculate
   
 # calculator()
 
+# ----------------------------- 
+# 169. Majority Element
+
+# Given an array nums of size n, return the majority element.
+# The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+# Example 1:
+# Input: nums = [3,2,3]
+# Output: 3
+
+# Example 2:
+# Input: nums = [2,2,1,1,1,2,2]
+# Output: 2
+
+# class Solution(object):
+#     def majorityElement(self, nums):
+#         counts = {}
+        
+#         for i in nums:
+#             if i in counts:
+#                 counts[i] += 1
+#             else: counts[i] = 1
+            
+#             maxCount = 0
+#             maj = None
+            
+#             for i, count in counts.items():
+#                   if (count > maxCount):
+#                       maj = i
+#                       maxCount = count
+                      
+#         return maj
+                
+# s1 = Solution()
+# nums = [1,1,2,3,4,5,6,7,7,3,7]
+# print(s1.majorityElement(nums))
+            
 # ----------------------------- 
