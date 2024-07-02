@@ -71,7 +71,7 @@ b = 150
 
 # result = errorCheck(x,y)
 # print(result)
-
+# ----------------------------- 
 # Classes and objects
 # 1. Take input from user(n,a,g)
 # 2. Create a class with init method and also create a action method display to print attributes
@@ -82,22 +82,47 @@ b = 150
 # a = int(input("Age: "))
 # g = int(input("Grades: "))
 
-class User:
-   def __init__(self, n, a, *g):
-     self.n = n
-     self.a = a
-     self.g = g
+# class User:
+#    def __init__(self, n, a, *g):
+#      self.n = n
+#      self.a = a
+#      self.g = g
      
-   def Display(self):
-     print("\nName:", self.n)
-     print("Age:", self.a)
-     print("Grades:", self.g)
+#    def Display(self):
+#      print("\nName:", self.n)
+#      print("Age:", self.a)
+#      print("Grades:", self.g)
      
      
-user1 = User("Mejra", 19, 8, 9, 10, 10)
+# user1 = User("Mejra", 19, 8, 9, 10, 10)
 
 
-user2 = User("Ena", 22, 10, 10, 10, 10)
+# user2 = User("Ena", 22, 10, 10, 10, 10)
 
-user1.Display()
-user2.Display()
+# user1.Display()
+# user2.Display()
+# ----------------------------- 
+# Make a simple calculator app using path
+
+from calc import calculate 
+
+# def calculator():
+#   a = int(input("Enter number 1: "))
+#   b = int(input("Enter number 2: "))
+#   c = input("Enter type of calculation (+, -, *, /): ")
+  
+#   if (c == "+"):
+#     calculate.add(a, b)
+    
+#   if (c == "-"):
+#     calculate.subtract(a, b)
+    
+#   if (c == "*"):
+#     calculate.multiply(a, b)
+    
+#   if (c == "/"):
+#     calculate.divide(a, b)
+  
+# calculator()
+
+# ----------------------------- 

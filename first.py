@@ -170,21 +170,96 @@ games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 
 # -----------------------------    encapsulation
 
-
-class TLOU3:
-    def __init__(self):
-        self.release = 2027
-        self.__new_release = 2028
+# class TLOU3:
+#     def __init__(self):
+#         self.release = 2027
+#         self.__new_release = 2028
         
-    def getNewRelease(self):
-        return self.__new_release
+#     def getNewRelease(self):
+#         return self.__new_release
     
-    def setNewRelease(self, newRelease):
-        self.__new_release = newRelease
+#     def setNewRelease(self, newRelease):
+#         self.__new_release = newRelease
         
         
-i1 = TLOU3()
+# i1 = TLOU3()
 
-i1.setNewRelease(2026)
+# i1.setNewRelease(2026)
 
-print(i1.getNewRelease())
+# print(i1.getNewRelease())
+
+# -----------------------------    inheritance
+
+# class Polygon:
+#     __width = None
+#     __height = None
+    
+#     def setValue(self, width, height):
+#         self.__width = width
+#         self.__height = height
+        
+#     def getWidth(self):
+#         return self.__width
+    
+#     def getHeight(self):
+#         return self.__height
+        
+        
+
+# class Square(Polygon):
+#     def area(self):
+#        return self.getWidth() * self.getHeight()
+   
+# s1 = Square()
+# s1.setValue(5, 10)
+# print(s1.area())
+
+
+
+# class Vechile:
+#     __type = None
+#     __year = None
+    
+#     def setValues(self, type, year):
+#         self.__type = type
+#         self.__year = year
+        
+#     def getType(self):
+#         return self.__type
+    
+#     def getYear(self):
+#         return self.__year
+    
+#     def info(self):
+#         print("Type: ", self.__type, "\nYear: ", self.__year,  )
+
+
+# class Car(Vechile):
+#     def desc(self):
+#         print("This car is the perfect choice for all the families who are always ready for an adventure\n")
+
+# c1 = Car()
+
+# c1.setValues("Audi", 2016)
+# c1.info()
+# c1.desc()
+
+# class Motorcyle(Vechile):
+#     def desc(self):
+#         print("This motorycyle is ideal for adrenaline freaks")
+    
+# m1 = Motorcyle()
+
+# m1.setValues("Suzuki", 2022)
+# m1.info()
+# m1.desc()
+
+
+
+# -----------------------------    modules
+
+# import math
+import mymath # our own path for simple calculations
+
+result = mymath.add(2,2)
+print(result)
