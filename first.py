@@ -259,7 +259,22 @@ games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 # -----------------------------    modules
 
 # import math
-import mymath # our own path for simple calculations
+# import mymath # our own path for simple calculations
 
-result = mymath.add(2,2)
-print(result)
+# result = mymath.add(2,2)
+# print(result)
+
+# -----------------------------   super function
+
+# class Parent:
+#     def __init__(self, name):
+#         print("Parent init", name)
+        
+# class Child(Parent):
+#     def __init__(self):
+#         print("Child init")
+#         super().__init__("Mejra")
+        
+# childObj = Child()
+
+# childObj.__init__()
