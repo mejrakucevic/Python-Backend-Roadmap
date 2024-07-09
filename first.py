@@ -345,3 +345,10 @@ games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 # tea.drinkTea()
 
 # ----------------------------- 
+
+fh = open("primer.txt", "w")
+
+fh.write("Ja napisah nesto")
+
+fh.close()
+
