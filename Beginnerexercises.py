@@ -173,39 +173,91 @@ b = 150
 # Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
 # Return k.
 
-class Solution(object):
-    def removeDuplicates(self, nums):
-        # nums = [1,2,3,1,4,5]
+# class Solution(object):
+#     def removeDuplicates(self, nums):
+#         # nums = [1,2,3,1,4,5]
         
-        counter = {}
-        repeatedNum = None
+#         counter = {}
+#         repeatedNum = None
         
-        length = len(nums)
+#         length = len(nums)
         
         
-        for i in list(nums):
-            if i in counter:
-                counter[i] += 1
-                nums.remove(i)
-            else: counter[i] = 0
+#         for i in list(nums):
+#             if i in counter:
+#                 counter[i] += 1
+#                 nums.remove(i)
+#             else: counter[i] = 0
             
-        maxCount = 0
+#         maxCount = 0
         
-        for i, repeats in counter.items():
-            if repeats > maxCount:
-                maxCount == counter
-                repeatedNum = counter[i]
+#         for i, repeats in counter.items():
+#             if repeats > maxCount:
+#                 maxCount == counter
+#                 repeatedNum = counter[i]
                 
-        print(nums)
+#         print(nums)
         
             
             
-s1 = Solution()
+# s1 = Solution()
 
-s1.removeDuplicates([0,0,1,1,1,2,2,3,3,4])  
+# s1.removeDuplicates([0,0,1,1,1,2,2,3,3,4])  
 
 # Example 1:
 # Input: nums = [1,1,2]
 # Output: 2, nums = [1,2,_]
 # Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
 # It does not matter what you leave beyond the returned k (hence they are underscores).
+# ----------------------------- 
+
+# We have 2 books, python and java. They have different number of pages. We create class
+# for both, and using overloading operators we add the pages of both books, check which one has more pages
+
+# class Books:
+#     def __init__(self, pages):
+#         self.pages = pages
+        
+#     def __add__(self, other):
+#         return self.pages + other.pages
+        
+#     def __gt__(self, other):
+#         return self.pages > other.pages
+    
+
+# class PythonB(Books):
+#     pass
+   
+    
+# class JavaB(Books):
+#     pass
+        
+        
+# b1 = PythonB(300)
+# b2 = JavaB(450)
+
+# print(b1 > b2)
+# ----------------------------- 
+
+# create tea class, and if its too hate raise an exception
+
+
+# class teaException(Exception):
+#     def __init__(self, arg):
+#         self.msg = arg
+
+# class Tea:
+#     def __init__(self, temp):
+#         self.temp = temp
+        
+#     def drinkTea(self):
+#      if self.temp > 80:
+#         raise teaException("Too hot!") # user defined exception
+#      elif self.temp < 60:
+#          raise Exception("Too cold")
+#      else: print("Ok to drink")
+     
+     
+# tea = Tea(10)
+
+# tea.drinkTea()

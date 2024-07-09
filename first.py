@@ -278,3 +278,70 @@ games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 # childObj = Child()
 
 # childObj.__init__()
+
+# -----------------------------   overloaders
+
+# a = 10
+# b= 20
+
+# print(a+b)
+
+# p = "Hello"
+# q = " World"
+# print(p + q)
+
+# x = [10,20,30]
+# y = [5,6,7]
+# print(x+y)
+
+# class Books:
+#     def __init__(self, pages):
+#         self.pages = pages
+        
+#     def __add__(self, other):
+#         return self.pages + other.pages
+    
+#     def __mul__(self, other):
+#         return self.pages * other.pages
+    
+# b1 = Books(100) 
+# b2 = Books(150)
+
+# print(b1 * b2)
+
+# -----------------------------   exceptions/errors/ user defined exceptions
+
+# result = None
+
+# x = int(input("Number 1: "))
+# y = int(input("Number 2: "))
+
+# try:
+#     result = x / y
+# except Exception as e:
+#     print("ERROR:")
+#     print(e)
+    
+# print("Result = ", result)
+
+# class teaException(Exception):
+#     def __init__(self, arg):
+#         self.msg = arg
+
+# class Tea:
+#     def __init__(self, temp):
+#         self.temp = temp
+        
+#     def drinkTea(self):
+#      if self.temp > 80:
+#         raise teaException("Too hot!") # user defined exception
+#      elif self.temp < 60:
+#          raise Exception("Too cold")
+#      else: print("Ok to drink")
+     
+     
+# tea = Tea(10)
+
+# tea.drinkTea()
+
+# ----------------------------- 
