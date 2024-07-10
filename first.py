@@ -344,11 +344,50 @@ games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 
 # tea.drinkTea()
 
-# ----------------------------- 
+# -----------------------------  READING/WRITING FILES
 
-fh = open("primer.txt", "w")
+# fh = open("primer.txt", "w")
 
-fh.write("Ja napisah nesto")
+# fh.write("Ja napisah nesto")
+
+# fh.close()
+
+
+# fh = open("demo.txt", "w")
+
+# try:
+#      for i in range(1,11):
+#       fh.write("%d\n" %i)
+    
+#      fh.write("Oink")
+
+# # class lyrics:
+# #     fh.write("Delicate - Taylor Swift\n")
+# #     fh.write("nvm")
+# # l1 = lyrics()
+
+# finally: 
+#   fh.close()
+  
+# !--------------------------------------!
+# with open("demo.txt", "w") as fh:
+#       for i in range(1,5):
+#        fh.write("%d\n" %i)
+    
+#       fh.write("Oink")
+# !--------------------------------------!
+
+
+
+fh = open("lyrics.txt", "r")
+
+# print(fh.read(24))
+# print(fh.readline())
+# print(fh.readlines()[1])
+
+for i in fh:
+    print(i.split(" "))
 
 fh.close()
 
+# ----------------------------- 
