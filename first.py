@@ -377,17 +377,15 @@ games = ["TLOU", "TLOU2", "AC ODYSSEY", "AC VALHALLA", "LIS"]
 #       fh.write("Oink")
 # !--------------------------------------!
 
+# fh = open("lyrics.txt", "r")
 
+# # print(fh.read(24))
+# # print(fh.readline())
+# # print(fh.readlines()[1])
 
-fh = open("lyrics.txt", "r")
+# for i in fh:
+#     print(i.split(" "))
 
-# print(fh.read(24))
-# print(fh.readline())
-# print(fh.readlines()[1])
-
-for i in fh:
-    print(i.split(" "))
-
-fh.close()
+# fh.close()
 
 # ----------------------------- 
