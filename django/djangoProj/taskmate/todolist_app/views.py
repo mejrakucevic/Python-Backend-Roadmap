@@ -4,4 +4,14 @@ from django.http import HttpResponse
 # Create your views here.
 
 def todolist(request):
-    return render(request, 'todolist.html', {})
+    context = {
+        'welcomeText': "welcome to TaskMate"
+    }
+    return render(request, 'todolist.html', context)
+
+
+def contact(request):
+    context = {
+        'welcomeText': "welcome to Contact page"
+    }
+    return render(request, 'contact.html', context)
