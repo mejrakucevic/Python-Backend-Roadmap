@@ -10,8 +10,8 @@ def todolist(request):
     return render(request, 'todolist.html', context)
 
 
-def contact(request):
-    context = {
-        'welcomeText': "welcome to Contact page"
-    }
-    return render(request, 'contact.html', context)
+# def contact(request):
+#     context = {
+#         'welcomeText': "welcome to Contact page"
+#     }
+#     return render(request, 'contact.html', context)
