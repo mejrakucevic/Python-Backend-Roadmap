@@ -2,6 +2,8 @@
 
 from tkinter import *
 from PIL import Image, ImageTk
+import os
+
 
 window = Tk()
 
@@ -33,6 +35,11 @@ photoo.pack()
 
 def click():
     print("Added!")
+    
+    filePath = "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/NEMESIS M700/NEMESIS M700"
+    
+    if os.name== "nt":
+        os.startfile(filePath)
 
 uploadImg = Image.open("upload.png")
 uploadR = uploadImg.resize((40,40))
