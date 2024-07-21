@@ -13,6 +13,10 @@ window.title("LaunchX")
 icon = PhotoImage(file="icon.png")
 window.iconphoto(True, icon)
 
+
+
+
+
 window.config(background="#252626")
 
 photo = Image.open("photo.png")
@@ -36,7 +40,7 @@ photoo.pack()
 def click():
     print("Added!")
     
-    filePath = "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/NEMESIS M700/NEMESIS M700"
+    filePath = "C:/ProgramData/Microsoft/Windows"
     
     if os.name== "nt":
         os.startfile(filePath)
@@ -44,6 +48,10 @@ def click():
 uploadImg = Image.open("upload.png")
 uploadR = uploadImg.resize((40,40))
 uploadImg = ImageTk.PhotoImage(uploadR)
+
+game1 = Image.open("ac.png")
+game1R = game1.resize((80, 80))
+game1 = ImageTk.PhotoImage(game1R)
 
 button = Button(window,
                 text="Add",
@@ -55,7 +63,25 @@ button = Button(window,
                 activebackground="#6ccbeb",
                 image=uploadImg,
                 compound="right")
-button.place(x=200, y=250)
+button.place(x=200, y=200)
+
+def openG1():
+    game1Path = "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/NEMESIS M700/NEMESIS M700"
+    
+    if os.name == "nt":
+        os.startfile(game1Path)
+    
+
+gameOpen = Button(
+    window,
+    background="whitesmoke",
+    padx=10, pady=5,
+    image = game1,
+    command=openG1
+    
+)
+
+gameOpen.place(x=235, y=300)
 
 window.mainloop()
 
