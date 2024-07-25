@@ -1,87 +1,126 @@
-# import tkinter as tk
-
+import tkinter as tk
 from tkinter import *
+import customtkinter
 from PIL import Image, ImageTk
 import os
 
-
-window = Tk()
-
+window = customtkinter.CTk()
 window.geometry("540x540")
 window.title("LaunchX")
 
-icon = PhotoImage(file="icon.png")
-window.iconphoto(True, icon)
-
-
-
-
-
-window.config(background="#252626")
+# icon = PhotoImage(file="icon.png")
+# window.iconphoto(True, icon)
+# window.config(background="#252626")
 
 photo = Image.open("photo.png")
 photoR = photo.resize((125, 125))
 photo = ImageTk.PhotoImage(photoR)
 
-label = Label(window,
-              text="Mejra's Games",
-              font=("Roboto", 20),
-              fg="whitesmoke",
-              bg="#252626",
-              pady=5,
-              padx=20,
-              relief=RAISED,
-              bd=5,
-              )
-photoo = Label(window, image=photo, bg="#252626")
+label = customtkinter.CTkLabel(window,
+                               text="Game Launcher",
+                               font=("Sans Serif", 35),
+                               pady=25)
 label.pack()
-photoo.pack()
 
 def click():
     print("Added!")
-    
     filePath = "C:/ProgramData/Microsoft/Windows"
-    
-    if os.name== "nt":
+    if os.name == "nt":
         os.startfile(filePath)
 
 uploadImg = Image.open("upload.png")
-uploadR = uploadImg.resize((40,40))
+uploadR = uploadImg.resize((45, 45))
 uploadImg = ImageTk.PhotoImage(uploadR)
 
-game1 = Image.open("ac.png")
-game1R = game1.resize((80, 80))
-game1 = ImageTk.PhotoImage(game1R)
+button = customtkinter.CTkButton(window,
+                                 text="Add",
+                                 command=click,
+                                  font=("Sans Serif", 20),
+                                 image=uploadImg,
+                                 compound="right")
+button.place(x=200, y=100)
 
-button = Button(window,
-                text="Add",
-                command=click,
-                font=("Roboto"),
-                bg="#ebebeb",
-                padx=25, pady=10,
-                relief=GROOVE,
-                activebackground="#6ccbeb",
-                image=uploadImg,
-                compound="right")
-button.place(x=200, y=200)
+frame = tk.Frame(window, background="#3173a8", bd=1, relief="flat")
+frame.place(relx=0.5, rely=0.5, anchor=CENTER)
+
+# Load and resize images for game buttons
+def load_images():
+    global game_images
+    game_images = {
+        'game1_small': ImageTk.PhotoImage(Image.open("ac.png").resize((80, 80))),
+        'game1_large': ImageTk.PhotoImage(Image.open("ac.png").resize((100, 100))),
+        'game2_small': ImageTk.PhotoImage(Image.open("spider.png").resize((82, 82))),
+        'game2_large': ImageTk.PhotoImage(Image.open("spider.png").resize((100, 100))),
+        'game3_small': ImageTk.PhotoImage(Image.open("cyb2.png").resize((82, 82))),
+        'game3_large': ImageTk.PhotoImage(Image.open("cyb2.png").resize((100, 100))),
+        'game4_small': ImageTk.PhotoImage(Image.open("mc.png").resize((82, 82))),
+        'game4_large': ImageTk.PhotoImage(Image.open("mc.png").resize((100, 100)))
+    }
+
+load_images()
+
+def on_enter(event, small_img, large_img):
+    event.widget.config(image=large_img,  cursor="hand2")
+    
+def on_leave(event, small_img):
+    event.widget.config(image=small_img)
 
 def openG1():
     game1Path = "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/NEMESIS M700/NEMESIS M700"
-    
     if os.name == "nt":
         os.startfile(game1Path)
-    
 
-gameOpen = Button(
-    window,
-    background="whitesmoke",
-    padx=10, pady=5,
-    image = game1,
-    command=openG1
-    
-)
+def openG2():
+    game2Path = ""
+    if os.name == "nt":
+        os.startfile(game2Path)
 
-gameOpen.place(x=235, y=300)
+def openG3():
+    game3Path = ""
+    if os.name == "nt":
+        os.startfile(game3Path)
+
+def openG4():
+    game4Path = ""
+    if os.name == "nt":
+        os.startfile(game4Path)
+
+# Create buttons and bind hover events
+gameOpen = Button(frame,
+                  background="whitesmoke",
+                  padx=10, pady=5,
+                  image=game_images['game1_small'],
+                  command=openG1)
+gameOpen.grid(row=0, column=0, padx=10, pady=5)
+gameOpen.bind("<Enter>", lambda e: on_enter(e, game_images['game1_small'], game_images['game1_large']))
+gameOpen.bind("<Leave>", lambda e: on_leave(e, game_images['game1_small']))
+
+gameOpen2 = Button(frame,
+                   background="whitesmoke",
+                   padx=10, pady=5,
+                   image=game_images['game2_small'],
+                   command=openG2)
+gameOpen2.grid(row=0, column=1, padx=10, pady=5)
+gameOpen2.bind("<Enter>", lambda e: on_enter(e, game_images['game2_small'], game_images['game2_large']))
+gameOpen2.bind("<Leave>", lambda e: on_leave(e, game_images['game2_small']))
+
+gameOpen3 = Button(frame,
+                   background="whitesmoke",
+                   padx=10, pady=5,
+                   image=game_images['game3_small'],
+                   command=openG3)
+gameOpen3.grid(row=0, column=2, padx=10, pady=5)
+gameOpen3.bind("<Enter>", lambda e: on_enter(e, game_images['game3_small'], game_images['game3_large']))
+gameOpen3.bind("<Leave>", lambda e: on_leave(e, game_images['game3_small']))
+
+gameOpen4 = Button(frame,
+                   background="whitesmoke",
+                   padx=10, pady=5,
+                   image=game_images['game4_small'],
+                   command=openG4)
+gameOpen4.grid(row=0, column=3, padx=10, pady=5)
+gameOpen4.bind("<Enter>", lambda e: on_enter(e, game_images['game4_small'], game_images['game4_large']))
+gameOpen4.bind("<Leave>", lambda e: on_leave(e, game_images['game4_small']))
 
 window.mainloop()
 
