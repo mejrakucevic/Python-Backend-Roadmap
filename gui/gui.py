@@ -7,6 +7,7 @@ import os
 window = customtkinter.CTk()
 window.geometry("540x540")
 window.title("LaunchX")
+# window.config(background="whitesmoke")
 
 # icon = PhotoImage(file="icon.png")
 # window.iconphoto(True, icon)
@@ -19,7 +20,8 @@ photo = ImageTk.PhotoImage(photoR)
 label = customtkinter.CTkLabel(window,
                                text="Game Launcher",
                                font=("Sans Serif", 35),
-                               pady=25)
+                               pady=25,
+                              )
 label.pack()
 
 def click():
@@ -37,10 +39,12 @@ button = customtkinter.CTkButton(window,
                                  command=click,
                                   font=("Sans Serif", 20),
                                  image=uploadImg,
-                                 compound="right")
+                                 compound="right",
+                                 
+                                )
 button.place(x=200, y=100)
 
-frame = tk.Frame(window, background="#3173a8", bd=1, relief="flat")
+frame = tk.Frame(window, bg="#212121")
 frame.place(relx=0.5, rely=0.5, anchor=CENTER)
 
 # Load and resize images for game buttons
@@ -66,37 +70,36 @@ def on_leave(event, small_img):
     event.widget.config(image=small_img)
 
 def openG1():
-    game1Path = "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/NEMESIS M700/NEMESIS M700"
+    game1Path = "F:/Games/Assassin's Creed - Syndicate/ACS.exe"
     if os.name == "nt":
         os.startfile(game1Path)
 
 def openG2():
-    game2Path = ""
+    game2Path = "F:/Games/Marvel’s Spider-Man - Miles Morales/MilesMorales.exe"
     if os.name == "nt":
         os.startfile(game2Path)
 
 def openG3():
-    game3Path = ""
+    game3Path = "F:/Games\Cyberpunk 2077/bin/x64/Cyberpunk2077.exe"
     if os.name == "nt":
         os.startfile(game3Path)
 
 def openG4():
-    game4Path = ""
+    game4Path = "F:/Games\Minecraft Dungeons/Dungeons.exe"
     if os.name == "nt":
         os.startfile(game4Path)
 
 # Create buttons and bind hover events
 gameOpen = Button(frame,
-                  background="whitesmoke",
                   padx=10, pady=5,
                   image=game_images['game1_small'],
-                  command=openG1)
+                  command=openG1,
+                  )
 gameOpen.grid(row=0, column=0, padx=10, pady=5)
 gameOpen.bind("<Enter>", lambda e: on_enter(e, game_images['game1_small'], game_images['game1_large']))
 gameOpen.bind("<Leave>", lambda e: on_leave(e, game_images['game1_small']))
 
 gameOpen2 = Button(frame,
-                   background="whitesmoke",
                    padx=10, pady=5,
                    image=game_images['game2_small'],
                    command=openG2)
@@ -105,7 +108,6 @@ gameOpen2.bind("<Enter>", lambda e: on_enter(e, game_images['game2_small'], game
 gameOpen2.bind("<Leave>", lambda e: on_leave(e, game_images['game2_small']))
 
 gameOpen3 = Button(frame,
-                   background="whitesmoke",
                    padx=10, pady=5,
                    image=game_images['game3_small'],
                    command=openG3)
@@ -114,7 +116,6 @@ gameOpen3.bind("<Enter>", lambda e: on_enter(e, game_images['game3_small'], game
 gameOpen3.bind("<Leave>", lambda e: on_leave(e, game_images['game3_small']))
 
 gameOpen4 = Button(frame,
-                   background="whitesmoke",
                    padx=10, pady=5,
                    image=game_images['game4_small'],
                    command=openG4)
